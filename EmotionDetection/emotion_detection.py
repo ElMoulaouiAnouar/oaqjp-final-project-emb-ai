@@ -10,10 +10,8 @@ def emotion_detector(text_to_analyse):
     
     if response.status_code == 400 :
       return {
-            'anger': None,
-            'disgust': None,
-            'fear': None,
-            'joy': None,
+            'anger': None,'disgust': None,
+            'fear': None,'joy': None,
             'sadness': None,
             'dominant_emotion': None
         }   
@@ -30,10 +28,8 @@ def emotion_detector(text_to_analyse):
         dominant_emotion = max(emotion_predictions, key=emotion_predictions.get)
     
         result = {
-                'anger': anger_score,
-                'disgust': disgust_score,
-                'fear': fear_score,
-                'joy': joy_score,
+                'anger': anger_score,'disgust': disgust_score,
+                'fear': fear_score,'joy': joy_score,
                 'sadness': sadness_score,
                 'dominant_emotion': dominant_emotion
             }
